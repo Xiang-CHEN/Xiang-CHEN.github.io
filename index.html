@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="all-posts" post-cate="All">
+<ul>
+  {% for post in site.posts %}
+    <li>
+    <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
+      <span>{{ post.title }}</span>
+      <span class="pull-right">{{ post.date | date: "%b %-d, %Y" }}</span>
+    </a>
+    </li>
+  {% endfor %}
+</ul>
+</div>
+
