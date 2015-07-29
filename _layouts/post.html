@@ -10,8 +10,15 @@
     <!-- Bootstrap core CSS -->
     <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for fixed-top navbar and sticky-footer -->
+    <!-- Custom styles CSS-->
     <link href="{{ site.baseurl }}/css/sticky-footer-navbar.css" rel="stylesheet">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,12 +58,15 @@
               <h3 class="panel-title">Categories</h3>
             </div>
             <div class="panel-body">
-              Panel content
+              Panel content<br/>
               <a class="back-to-top" href="#">Back to Top</a>
             </div>
           </div>
         </div>
         <div class="col-sm-9">
+          <h1>{{ page.title }}</h1>
+          <h4>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}</h4>
+          <hr/>
           {{content}}
         </div>
       </div>

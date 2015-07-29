@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 概率
+title: 概率分布的概念、条件概率
 date: 2015-06-04
 categories: 右旋粒子
 ---
@@ -30,6 +30,4 @@ categories: 右旋粒子
  - 全概率公式
  - 贝叶斯公式
 
-#常见概率分布
-二项分布：$X\sim B(n,p)$，$P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$
-几何分布：
+

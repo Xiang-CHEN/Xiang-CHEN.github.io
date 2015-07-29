@@ -5,15 +5,15 @@ date: 2015-06-04
 categories: 下拉电阻
 ---
 
-作为 Hello World，本页面用于测试。测试代码来自
+作为 Hello World，本页面用于测试。测试代码基于[Markdown Here](http://markdown-here.com/)。
 
-```javascript
+~~~javascript
 function syntaxHighlighting() {
   var n = 33;
   var s = "hello, こんにちは";
   console.log(s);
 }
-```
+~~~
 
 * plain
 * *emphasis*
@@ -29,17 +29,23 @@ function syntaxHighlighting() {
 
 An image: ![Markdown Here logo](http://adam-p.github.io/markdown-here/img/icon24.png) 
 
-> Block quote.  
+> Block quote.
 > *With* **some** `markdown`.
 
-If **TeX Math** support is enabled, this is the quadratic equation: 
-$-b \pm \sqrt{b^2 - 4ac} \over 2a$
+**MathJax** is used by kramdown to support inline equation $ax_1+bx_2=0$ and display equation
+
+$$-b \pm \sqrt{b^2 - 4ac} \over 2a$$
 
 # Header 1
+
 ## Header 2
+
 ### Header 3
+
 #### Header 4
+
 ##### Header 5
+
 ###### Header 6
   
 | Tables | Are | Cool |
@@ -52,7 +58,7 @@ Here's a horizontal rule:
 
 ---
 
-```
+~~~
 code block
 with no highlighting
-```
+~~~
