@@ -3,6 +3,7 @@ layout: post
 title: Hello Github.IO, Jekyll, Bootstrap, and Markdown
 date: 2015-06-04
 categories: 下拉电阻
+tag: 前端
 ---
 
 作为 Hello World，本页面用于测试。测试代码基于[Markdown Here](http://markdown-here.com/)。

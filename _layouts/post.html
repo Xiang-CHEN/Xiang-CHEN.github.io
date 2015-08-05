@@ -52,18 +52,36 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-3 hidden-xs">
+        <div class="col-sm-4 hidden-xs">
           <div class="panel panel-default affix">
             <div class="panel-heading">
               <h3 class="panel-title">Categories</h3>
             </div>
             <div class="panel-body">
-              Panel content<br/>
+              All Posts ({{site.posts | size}})
+              <ul>{% for category in site.categories %}
+                <li>{{category | first}} ({{category | last | size}})</li>
+                <ul>
+                {% for tag in site.tags %}
+                  {% assign incategory = false %}
+                  {% for post in {{category.last}} %}
+                    {% for posttag in post.tags %}
+	              {% if posttag == tag[0] %}
+	                {% assign incategory = true %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+                  {% if incategory %}
+                    <li>{{tag | first}} ({{tag | last | size}})</li>
+                  {% endif %}
+                {% endfor %}
+                </ul>
+              {% endfor %}</ul>
               <a class="back-to-top" href="#">Back to Top</a>
             </div>
           </div>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-8">
           <h1>{{ page.title }}</h1>
           <h4>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}</h4>
           <hr/>

@@ -13,8 +13,6 @@
     <!-- Custom styles CSS-->
     <link href="{{ site.baseurl }}/css/sticky-footer-navbar.css" rel="stylesheet">
 
-    <link href="{{ site.baseurl }}/css/markdown_syntax.css" rel="stylesheet">
-
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
     </script>
@@ -54,33 +52,36 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-3 hidden-xs">
+        <div class="col-sm-4 hidden-xs">
           <div class="panel panel-default affix">
             <div class="panel-heading">
               <h3 class="panel-title">Categories</h3>
             </div>
             <div class="panel-body">
-              {% for category in site.categories %}
-              {{category | first}}
-              {% endfor %}
-              {% for category in site.categories %}
-                <div post-cate="{{category | first}}">
-                {% for posts in category %}
-                  {% for post in posts %}
-	            {% if post.url %}
-	              <a href="{{ post.url }}" class="post-list-item">
-	              {{ post.title }}
-	              </a>
-                    {% endif %}
+              All Posts ({{site.posts | last | size}})
+              <ul>{% for category in site.categories %}
+                <li>{{category | first}} ({{category | last | size}})</li>
+                <ul>
+                {% for tag in site.tags %}
+                  {% assign incategory = false %}
+                  {% for post in {{category.last}} %}
+                    {% for posttag in post.tags %}
+	              {% if posttag == tag[0] %}
+	                {% assign incategory = true %}
+                      {% endif %}
+                    {% endfor %}
                   {% endfor %}
+                  {% if incategory %}
+                    <li>{{tag | first}} ({{tag | last | size}})</li>
+                  {% endif %}
                 {% endfor %}
-                </div>
-              {% endfor %}
+                </ul>
+              {% endfor %}</ul>
               <a class="back-to-top" href="#">Back to Top</a>
             </div>
           </div>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-8">
           {{content}}
         </div>
       </div>

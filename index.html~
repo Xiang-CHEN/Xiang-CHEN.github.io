@@ -7,7 +7,7 @@ layout: default
     <li>
     <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
       <span>{{ post.title }}</span>
-      <span class="text-right">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <span class="pull-right">{{ post.date | date: "%b %-d, %Y" }}</span>
     </a>
     </li>
   {% endfor %}
