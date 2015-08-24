@@ -48,7 +48,8 @@
 
     var level = get_level(headers[0]),
       this_level,
-      html = settings.title + " <"+settings.listType+">";
+      // html = settings.title + " <"+settings.listType+">";
+      html = settings.title + " <" + settings.listType + " class = 'nav nav-side'>";
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;
@@ -70,7 +71,8 @@
       }
       else if (this_level > level) { // lower level than before; expand the previous to contain a ol
         for(i = this_level; i > level; i--) {
-          html += "<"+settings.listType+"><li>"
+          // html += "<"+settings.listType+"><li>"
+          html += "<"+settings.listType+" class = 'nav nav-side'><li>"
         }
         html += "<a href='#" + fixedEncodeURIComponent(header.id) + "'>" + header.innerHTML + "</a>";
       }

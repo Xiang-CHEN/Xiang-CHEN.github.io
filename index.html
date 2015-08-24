@@ -4,7 +4,7 @@ layout: default
 <div class="all-posts" post-cate="All">
 <h3> All Posts</h3>
 <hr/>
-<ul>
+<ul class="nav">
   {% for post in site.posts %}
     <li>
     <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">

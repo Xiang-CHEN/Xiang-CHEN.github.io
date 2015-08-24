@@ -1,35 +1,56 @@
-/* Sticky footer styles
+/* General
 -------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
-.footer {
-  font-size: 16px;
-  padding-top: 12px;
-}
-
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
 body > .container {
   padding: 60px 15px 0;
 }
 .container .text-muted {
   margin: 20px 0;
 }
-
+.footer {
+  font-size: 16px;
+  padding-top: 12px;
+}
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
 }
-
 code {
   font-size: 80%;
 }
+
+/* Customed
+-------------------------------------------------- */
+a:hover {
+  text-decoration: none;
+}
+.scrollspy {
+  position: relative;
+}
+.panel-body {
+  padding-left: 10px;
+}
+.nav-side {
+  padding-left: 15px;
+}
+.nav-side>li>a {
+  padding: 1px 10px;
+}
+.nav-side>.active>a {
+  padding-left: 8px;
+  border-left: 2px solid #337ab7;
+}
+.center-list {
+  font-size: 20px;
+}
+
+
+
+
+
