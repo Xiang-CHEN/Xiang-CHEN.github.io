@@ -2,10 +2,11 @@
 layout: post
 title: 概率分布的概念、条件概率
 date: 2015-06-08
-categories: 右旋粒子 概率随机
+categories: 右旋粒子
+tag: 概率随机
 ---
 
-#概率的公理化定义
+# 概率的公理化定义
 令随机实验的样本空间为$\Omega$，定义**事件域**$\mathcal{F}$满足
 1. $\Omega\in \mathcal{F}$
 2. 若$A\in\mathcal{F}$，则对立事件$\overline{A}\in \mathcal{F}$

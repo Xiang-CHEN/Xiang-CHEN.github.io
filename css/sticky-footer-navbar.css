@@ -33,6 +33,9 @@ a:hover {
 .scrollspy {
   position: relative;
 }
+.panel-title {
+  text-align: center;
+}
 .panel-body {
   padding-left: 10px;
 }

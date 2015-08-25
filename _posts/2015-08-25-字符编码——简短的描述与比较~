@@ -1,0 +1,27 @@
+---
+layout: post
+title: 计算机网络基础知识
+date: 2015-07-07
+categories: 下拉电阻
+tag: 网络
+---
+
+|	| 字节 | 支持 | 补充 |
+| --- | --- | --- |
+| ASCII | 1 | 128字符，包括32个控制符号 | 最高位为0 |
+| 扩展ASCII | 1 | 256字符 | 一些欧洲国家加入自己语言中的符号，但是各自不同 |
+| GB2312 | 1 2 | 7445字符，6763个汉字和682个其它符号 | 兼容ASCII |
+| GBK | 1 2 | 21886字符，21003个汉字 | 兼容GB2312，微软制定，不是国家标准 |
+| GB18030 | 1 2 4 | 汉字27484个，少数民族、繁体、日韩 | 完全兼容GB2312，基本兼容GBK |
+| ANSI | ASCII+GB2312（简体中文版）/Big5（繁体中文版）|
+| UCS-2	2	 	Unicode实现方式之一
+| UTF-8	1-4	 	Unicode实现方式之一，兼容ASCII
+
+注：
+Unicode本身只是符号集合，规定了符号的二进制代码，但没有规定编码方式。当其作为编码方式时指UCS-2。UTF-8是互联网上使用最多的Unicode实现方式，另外还有UTF-16、UTF-32等等。UTF-16基本用2字节存储。UTF-32又称UCS-4，固定4字节。
+
+参考：
+http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html
+http://www.cnblogs.com/skynet/archive/2011/05/03/2035105.html
+http://www.crifan.com/files/doc/docbook/char_encoding/release/html/char_encoding.html
+http://www.laruence.com/2009/08/22/1059.html

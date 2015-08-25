@@ -34,7 +34,7 @@ a:hover {
   position: relative;
 }
 .panel-body {
-  padding-left: 5px;
+  padding-left: 10px;
 }
 .nav-side {
   padding-left: 15px;

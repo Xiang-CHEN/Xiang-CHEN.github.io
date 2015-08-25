@@ -8,6 +8,12 @@ tag: 前端
 
 作为 Hello World，本页面用于测试。测试代码基于[Markdown Here](http://markdown-here.com/)。
 
+计划中的改进：
+
+- 文章分类超链接
+- Markdown样式
+- scrollspy偏移
+
 ~~~javascript
 function syntaxHighlighting() {
   var n = 33;
@@ -33,7 +39,7 @@ An image: ![Markdown Here logo](http://adam-p.github.io/markdown-here/img/icon24
 > Block quote.
 > *With* **some** `markdown`.
 
-**MathJax** is used by kramdown to support inline equation $$ax_1+bx_2=0$$ and display equation
+**MathJax** is used by kramdown to support inline equation $ax_1+bx_2=0$ and display equation
 
 $$-b \pm \sqrt{b^2 - 4ac} \over 2a$$
 
