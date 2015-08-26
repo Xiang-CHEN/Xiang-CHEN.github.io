@@ -39,7 +39,7 @@ An image: ![Markdown Here logo](http://adam-p.github.io/markdown-here/img/icon24
 > Block quote.
 > *With* **some** `markdown`.
 
-**MathJax** is used by kramdown to support inline equation $$ax_1+bx_2=0$$ and display equation
+**MathJax** is used by kramdown to support inline equation $ax_1+bx_2=0$ and display equation
 
 $$-b \pm \sqrt{b^2 - 4ac} \over 2a$$
 
@@ -65,7 +65,7 @@ Here's a horizontal rule:
 
 ---
 
-~~~
+```
 code block
 with no highlighting
-~~~
+```

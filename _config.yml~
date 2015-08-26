@@ -15,7 +15,6 @@ permalink: /:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
-  input: GFM
 
 # highlight
 # 本地用rouge, github上用pygments

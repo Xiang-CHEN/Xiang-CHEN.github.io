@@ -14,13 +14,13 @@ tag: 前端
 - Markdown样式
 - scrollspy偏移
 
-~~~javascript
+```javascript
 function syntaxHighlighting() {
   var n = 33;
   var s = "hello, こんにちは";
   console.log(s);
 }
-~~~
+```
 
 * plain
 * *emphasis*
@@ -65,7 +65,7 @@ Here's a horizontal rule:
 
 ---
 
-~~~
+```
 code block
 with no highlighting
-~~~
+```

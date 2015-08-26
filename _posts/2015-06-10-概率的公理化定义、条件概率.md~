@@ -65,4 +65,4 @@ $P(B_i\|A)=\frac{P(A\|B_i)P(B_i)}{\sum_{j=1}^nP(A\|B_j)P(B_j)}$
 
 事件$A$、$B$独立，若$P(AB)=P(A)P(B)$
 
-事件$A_1,\cdots,A_n$独立，若$\forall 2\le k\le n$，$\forall 1\le i_1<\cdots<i_k\le n$，$P(A_{ i_1 }\cdots A_{ i_n })=P(A_{i_1})\cdots P(A_{i_n})$
+事件$A_1,\cdots,A_n$独立，若$\forall 2\le k\le n$，$\forall 1\le i_1<\cdots<i_k\le n$，$P(A_{i_1}\cdots A_{i_n})=P(A_{i_1})\cdots P(A_{i_n})$
