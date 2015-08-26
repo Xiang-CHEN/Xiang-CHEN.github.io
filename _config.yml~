@@ -2,6 +2,7 @@
 title: Xiang CHEN's Blog
 email: xiangchen.cs@gmail.com
 description: Xiang CHEN's Blog
+
 # > # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
 #   line in _config.yml. It will appear in your document head meta (for
@@ -14,6 +15,7 @@ permalink: /:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
+  input: GFM
 
 # highlight
 # 本地用rouge, github上用pygments
