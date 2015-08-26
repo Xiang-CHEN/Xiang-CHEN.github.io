@@ -26,7 +26,7 @@ $$\begin{aligned}
 
 $$\begin{aligned}
 &Var(X)\\
-=&\sum_{k=0}^{n}k\binom{n}{k}p^k(1-p)^{n-k}\\
+=&\sum_{k=0}^{n}k^2\binom{n}{k}p^k(1-p)^{n-k}\\
 =&np\sum_{k=1}^{n}\binom{n-1}{k-1}p^{k-1}(1-p)^{n-k}\\
 =&np\sum_{k=0}^{n-1}\binom{n-1}{k}p^{k}(1-p)^{n-1-k}\\
 =&np
