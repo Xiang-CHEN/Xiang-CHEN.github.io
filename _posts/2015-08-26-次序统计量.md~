@@ -6,7 +6,7 @@ categories: 右旋粒子
 tag: 概率随机
 ---
 
-$X_1,\cdots,X_n$ 独立同分布，则次序统计量 $X_ {(1)},\cdots,X_ {(n)}$ 为
+$X_1,\cdots,X_n$ 独立同分布，则次序统计量 $X_{(1)},\cdots,X_{(n)}$ 为
 
 $$\begin{aligned}
 \left\{
