@@ -58,9 +58,9 @@
               <h3 class="panel-title">Categories</h3>
             </div>
             <div class="panel-body">
-              All Posts ({{site.posts | size}})
+              All Posts  ({{site.posts | size}})
               <ul class="nav nav-side">{% for category in site.categories %}
-                <li><span>{{category | first}}</span> <span class="pull-right">({{category | last | size}})</span></li>
+                <li>{{category | first}}  ({{category | last | size}})</li>
                 <ul class="nav nav-side">
                 {% for tag in site.tags %}
                   {% assign incategory = false %}
@@ -72,7 +72,7 @@
                     {% endfor %}
                   {% endfor %}
                   {% if incategory %}
-                    <li><span>{{tag | first}}</span> <span class="pull-right">({{tag | last | size}})</span></li>
+                    <li>{{tag | first}}  ({{tag | last | size}})</li>
                   {% endif %}
                 {% endfor %}
                 </ul>
@@ -83,7 +83,8 @@
         </div>
         <div class="col-sm-7">
           <h1>{{ page.title }}</h1>
-          <h4>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}</h4>
+          <h3>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}</h3>
+          本文为博主原创，转载请务必注明出处和作者，请勿用于商业用途。
           <hr/>
           <div>
           {{content}}
