@@ -25,7 +25,7 @@ tag: 概率随机
 
 更进一步，可得结论：
 
-若 $X_1,\cdots,X_n$ 相互独立，且 $X_i\sim N(\mu_i,\sigma_i^2)$，则对于任意一组不全为零的 $a_1,\cdots,a_n$，有 $\sum_ {i=1}^{n}a_i X_i+b\sim N(\sum_{i=1}^n a_i\mu_i+b, \sum_{i=1}^n a_i^2\sigma_i^2)$
+若 $X_1,\cdots,X_n$ 相互独立，且 $X_i\sim N(\mu_i,\sigma_i^2)$，则对于任意一组不全为零的 $a_1,\cdots,a_n$，有 $\sum_ {i=1}^{n}a_i X_i+b\sim N(\sum_ {i=1}^n a_i\mu_i+b, \sum_ {i=1}^n a_i^2\sigma_i^2)$
 
 # 独立性
 
