@@ -17,6 +17,7 @@ permalink: /:year/:month/:day/:title/
 markdown: kramdown
 kramdown:
   input: GFM
+  use_coderay: true
 
 # highlight
 # 本地用rouge, github上用pygments

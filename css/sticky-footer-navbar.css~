@@ -6,9 +6,25 @@ html {
 }
 body {
   margin-bottom: 40px;
+  font-size: 15px
 }
 body > .container {
   padding: 60px 15px 0;
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 2.3em;
+}
+h3 {
+  font-size: 2.1em;
+}
+h4 {
+  font-size: 2.0em;
+}
+hr {
+  border-top: 1px solid #ccc
 }
 .container .text-muted {
   margin: 20px 0;
@@ -32,6 +48,9 @@ a:hover {
 }
 .scrollspy {
   position: relative;
+}
+.panel-title {
+  text-align: center;
 }
 .panel-body {
   padding-left: 10px;
