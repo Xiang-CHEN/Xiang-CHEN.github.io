@@ -6,7 +6,7 @@ html {
 }
 body {
   margin-bottom: 40px;
-  font-family: Helvetica, Tahoma, Arial, STXihei, "Microsoft YaHei", "微软雅黑", "华文细黑", sans-serif;
+  font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
   font-size: 15px;
 }
 body > .container {
