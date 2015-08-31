@@ -6,7 +6,8 @@ html {
 }
 body {
   margin-bottom: 40px;
-  font-size: 15px
+  font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", sans-serif;
+  font-size: 15px;
 }
 body > .container {
   padding: 60px 15px 0;
