@@ -9,6 +9,12 @@ body {
   font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
   font-size: 15px;
 }
+:target:before {
+  content: "";
+  display: block;
+  height: 60px; /* fixed header height*/
+  margin: -60px 0 0; /* negative fixed header height */
+}
 body > .container {
   padding: 60px 15px 0;
 }
