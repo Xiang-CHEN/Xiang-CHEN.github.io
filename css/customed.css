@@ -9,6 +9,9 @@ body {
   font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", sans-serif;
   font-size: 15px;
 }
+.navbar-inverse .navbar-brand {
+  color: #ffffff
+}
 :target:before {
   content: "";
   display: block;
@@ -50,8 +53,42 @@ code {
 
 /* Customed
 -------------------------------------------------- */
+a {
+  color:#337ab7;
+  text-decoration:none
+}
+a:focus, a:hover {
+  color:#23527c;
+  text-decoration:none
+}
+a:focus {
+  color:#337ab7;
+}
 a:hover {
+  color:#23527c;
+}
+.nav-side {
+  padding-left: 15px;
+}
+.nav-side>.active>a {
+  padding-left: 8px;
+  border-left: 2px solid #337ab7;
+}
+.nav-side > li > a {
+  position: relative;
+  display: block;
+  padding: 1px 10px;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
   text-decoration: none;
+  background-color: #eee;
+}
+.nav > li > a:focus {
+  background-color: #fff;
+}
+.nav > li > a:hover {
+  background-color: #eee;
 }
 .scrollspy {
   position: relative;
@@ -60,17 +97,7 @@ a:hover {
   text-align: center;
 }
 .panel-body {
-  padding-left: 10px;
-}
-.nav-side {
-  padding-left: 15px;
-}
-.nav-side>li>a {
-  padding: 1px 10px;
-}
-.nav-side>.active>a {
-  padding-left: 8px;
-  border-left: 2px solid #337ab7;
+  padding-left: 0px;
 }
 .center-list {
   font-size: 20px;

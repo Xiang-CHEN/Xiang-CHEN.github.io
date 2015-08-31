@@ -11,14 +11,7 @@
     <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles CSS-->
-    <link href="{{ site.baseurl }}/css/sticky-footer-navbar.css" rel="stylesheet">
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script type="text/javascript"
-      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
+    <link href="{{ site.baseurl }}/css/customed.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +21,7 @@
     <![endif]-->
   </head>
   
-  <body>
+  <body onload="showList('all','all')">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -58,26 +51,29 @@
               <h3 class="panel-title">Categories</h3>
             </div>
             <div class="panel-body">
-              All Posts  ({{site.posts | size}})
-              <ul class="nav nav-side">{% for category in site.categories %}
-                <li>{{category | first}}  ({{category | last | size}})</li>
-                <ul class="nav nav-side">
-                {% for tag in site.tags %}
-                  {% assign incategory = false %}
-                  {% for post in {{category.last}} %}
-                    {% for posttag in post.tags %}
-	              {% if posttag == tag[0] %}
-	                {% assign incategory = true %}
-                      {% endif %}
+              <ul class="nav nav-side">
+                <li><a href="javascript:void(0)" onclick="showList('all', 'all')">All Posts  ({{site.posts | size}})</a></li>
+                <ul class="nav nav-side">{% for category in site.categories %}
+                  <li><a href="javascript:void(0)" onclick="showList('{{category | first}}', 'all')">{{category | first}}  ({{category | last | size}})</a>
+                  <ul class="nav nav-side">
+                  {% for tag in site.tags %}
+                    {% assign incategory = false %}
+                    {% for post in {{category.last}} %}
+                      {% for posttag in post.tags %}
+	                {% if posttag == tag[0] %}
+	                  {% assign incategory = true %}
+                        {% endif %}
+                      {% endfor %}
                     {% endfor %}
+                    {% if incategory %}
+                      <li><a href="javascript:void(0)" onclick="showList('{{category | first}}', '{{tag | first}}')">{{tag | first}}  ({{tag | last | size}})</a></li>
+                    {% endif %}
                   {% endfor %}
-                  {% if incategory %}
-                    <li>{{tag | first}}  ({{tag | last | size}})</li>
-                  {% endif %}
-                {% endfor %}
-                </ul>
-              {% endfor %}</ul>
-              <a class="back-to-top" href="#">Back to Top</a>
+                  </ul>
+                {% endfor %}</ul>
+                </li>
+                <li><a class="back-to-top" href="#">Back to Top</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -109,10 +105,28 @@
     <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{{ site.baseurl }}/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="{{ site.baseurl }}/js/toc.js" type="text/javascript"></script>
+    <!-- showList -->
     <script type="text/javascript">
-    $(document).ready(function() {
-      $('#toc').toc({ listType: 'ul', minimumHeaders: 0 });
-    }); </script>
+      function showList(filterCat,filterTag) {
+        if (filterCat == "all") {
+          document.getElementById("postRange").innerHTML = "All Posts";
+          $("#postList > li").show("fast");
+        } else if (filterTag == 'all') {
+          document.getElementById("postRange").innerHTML = filterCat;
+          $("#postList > li").hide("fast");
+          $("#postList > li."+filterCat).show("fast");
+        } else {
+          document.getElementById("postRange").innerHTML = filterCat+"——"+filterTag;
+          $("#postList > li").hide("fast");
+          $("#postList > li."+filterCat+"."+filterTag).show("fast");
+        }
+      }</script>
+    <!-- Mathjax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
   </body>
 </html>

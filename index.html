@@ -1,12 +1,12 @@
 ---
 layout: default
 ---
-<div class="all-posts" post-cate="All">
-<h3> All Posts</h3>
+<div>
+<h3 id="postRange"> All Posts</h3>
 <hr/>
-<ul class="nav">
+<ul class="nav" id="postList">
   {% for post in site.posts %}
-    <li>
+    <li class="{{ post.categories}} {{ post.tags }}">
     <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
       <span>{{ post.title }}</span>
       <span class="pull-right">{{ post.date | date: "%b %-d, %Y" }}</span>

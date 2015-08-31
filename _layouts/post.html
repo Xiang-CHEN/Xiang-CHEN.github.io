@@ -11,7 +11,7 @@
     <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles CSS-->
-    <link href="{{ site.baseurl }}/css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/customed.css" rel="stylesheet">
 
     <!-- Markdown CSS-->
     <link href="{{ site.baseurl }}/css/markdown.css" rel="stylesheet">
@@ -52,31 +52,34 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3 hidden-xs">
-          <div class="panel panel-default affix" style="width:10%">
+          <div class="panel panel-default affix">
             <div class="panel-heading">
               <h3 class="panel-title">Categories</h3>
             </div>
             <div class="panel-body">
-              All Posts  ({{site.posts | size}})
-              <ul class="nav nav-side">{% for category in site.categories %}
-                <li>{{category | first}}  ({{category | last | size}})</li>
-                <ul class="nav nav-side">
-                {% for tag in site.tags %}
-                  {% assign incategory = false %}
-                  {% for post in {{category.last}} %}
-                    {% for posttag in post.tags %}
-	              {% if posttag == tag[0] %}
-	                {% assign incategory = true %}
-                      {% endif %}
+              <ul class="nav nav-side">
+                <li><a href="javascript:void(0)" onclick="{{ site.baseurl }}/index.html?onLoad()=showList('all', 'all')">All Posts  ({{site.posts | size}})</a></li>
+                <ul class="nav nav-side">{% for category in site.categories %}
+                  <li><a href="javascript:void(0)" onclick="showList('{{category | first}}', 'all')">{{category | first}}  ({{category | last | size}})</a>
+                  <ul class="nav nav-side">
+                  {% for tag in site.tags %}
+                    {% assign incategory = false %}
+                    {% for post in {{category.last}} %}
+                      {% for posttag in post.tags %}
+	                {% if posttag == tag[0] %}
+	                  {% assign incategory = true %}
+                        {% endif %}
+                      {% endfor %}
                     {% endfor %}
+                    {% if incategory %}
+                      <li><a href="javascript:void(0)" onclick="showList('{{category | first}}', '{{tag | first}}')">{{tag | first}}  ({{tag | last | size}})</a></li>
+                    {% endif %}
                   {% endfor %}
-                  {% if incategory %}
-                    <li>{{tag | first}}  ({{tag | last | size}})</li>
-                  {% endif %}
-                {% endfor %}
-                </ul>
-              {% endfor %}</ul>
-              <a class="back-to-top" href="#">Back to Top</a>
+                  </ul>
+                {% endfor %}</ul>
+                </li>
+                <li><a class="back-to-top" href="#">Back to Top</a></li>
+              </ul>
             </div>
           </div>
         </div>
