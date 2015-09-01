@@ -133,10 +133,10 @@
     $(document).ready(function() {
       $('#toc').toc({ listType: 'ul', minimumHeaders: 0, noBackToTopLinks: true, showEffect: 'slideDown', showSpeed: 0 });
     }); </script>
-    <!-- showList -->
+    <!-- jumptoList -->
     <script type="text/javascript">
-      function jumptoShowList() {
-        window.location.href=""+{{ site.baseurl }}+"/index.html?Cat="+{{category | first}}+"&Tag="+{{tag | first}}
+      function jumptoList() {
+        window.location.href="/index.html?Cat="+encodeURI({{category | first}})+"&Tag="+encodeURI({{tag | first}})
       }</script>
     <!-- Mathjax -->
     <script type="text/x-mathjax-config">
