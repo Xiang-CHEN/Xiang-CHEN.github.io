@@ -58,9 +58,9 @@
             </div>
             <div class="panel-body">
               <ul class="nav nav-side">
-                <li><a href="{{ site.baseurl }}/index.html?Cat=all&Tag=all">All Posts  ({{site.posts | size}})</a></li>
+                <li><a href="javascript:void(0)" onclick="jumptoList('all', 'all')">All Posts  ({{site.posts | size}})</a></li>
                 <ul class="nav nav-side">{% for category in site.categories %}
-                  <li><a href="{{ site.baseurl }}/index.html?Cat={{category | first}}&Tag=all">{{category | first}}  ({{category | last | size}})</a>
+                  <li><a href="javascript:void(0)" onclick="jumptoList('{{category | first}}', 'all')">{{category | first}}  ({{category | last | size}})</a>
                   <ul class="nav nav-side">
                   {% for tag in site.tags %}
                     {% assign incategory = false %}
@@ -72,7 +72,7 @@
                       {% endfor %}
                     {% endfor %}
                     {% if incategory %}
-                      <li><a href="{{ site.baseurl }}/index.html?Cat={{category | first}}&Tag={{tag | first}}">{{tag | first}}  ({{tag | last | size}})</a></li>
+                      <li><a href="javascript:void(0)" onclick="jumptoList('{{category | first}}', '{{tag | first}}')">{{tag | first}}  ({{tag | last | size}})</a></li>
                     {% endif %}
                   {% endfor %}
                   </ul>
@@ -133,6 +133,11 @@
     $(document).ready(function() {
       $('#toc').toc({ listType: 'ul', minimumHeaders: 0, noBackToTopLinks: true, showEffect: 'slideDown', showSpeed: 0 });
     }); </script>
+    <!-- showList -->
+    <script type="text/javascript">
+      function jumptoShowList() {
+        window.location.href=""+{{ site.baseurl }}+"/index.html?Cat="+encodeURI({{category | first}})+"&Tag="+encodeURI({{tag | first}})
+      }</script>
     <!-- Mathjax -->
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});

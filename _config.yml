@@ -9,7 +9,7 @@ description: Xiang CHEN's Blog
 #   Google search results) and in your feed.xml site description.
 
 # baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://xiang-chen.github.io/" # the base hostname & protocol for your site
 github_username: Xiang-CHEN
 permalink: /:year/:month/:day/:title/
 
