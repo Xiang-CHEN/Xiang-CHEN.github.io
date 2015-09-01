@@ -11,7 +11,7 @@
     <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles CSS-->
-    <link href="{{ site.baseurl }}/css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/customed.css" rel="stylesheet">
 
     <!-- Markdown CSS-->
     <link href="{{ site.baseurl }}/css/markdown.css" rel="stylesheet">
@@ -58,9 +58,9 @@
             </div>
             <div class="panel-body">
               <ul class="nav nav-side">
-                <li><a href="javascript:void(0)" onclick="{{ site.baseurl }}/index.html?onLoad()=showList('all', 'all')">All Posts  ({{site.posts | size}})</a></li>
+                <li><a href="{{ site.baseurl }}/index.html?Cat=all&Tag=all">All Posts  ({{site.posts | size}})</a></li>
                 <ul class="nav nav-side">{% for category in site.categories %}
-                  <li><a href="javascript:void(0)" onclick="showList('{{category | first}}', 'all')">{{category | first}}  ({{category | last | size}})</a>
+                  <li><a href="{{ site.baseurl }}/index.html?Cat={{category | first}}&Tag=all">{{category | first}}  ({{category | last | size}})</a>
                   <ul class="nav nav-side">
                   {% for tag in site.tags %}
                     {% assign incategory = false %}
@@ -72,7 +72,7 @@
                       {% endfor %}
                     {% endfor %}
                     {% if incategory %}
-                      <li><a href="javascript:void(0)" onclick="showList('{{category | first}}', '{{tag | first}}')">{{tag | first}}  ({{tag | last | size}})</a></li>
+                      <li><a href="{{ site.baseurl }}/index.html?Cat={{category | first}}&Tag=all">{{tag | first}}  ({{tag | last | size}})</a></li>
                     {% endif %}
                   {% endfor %}
                   </ul>

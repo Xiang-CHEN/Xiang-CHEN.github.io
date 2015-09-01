@@ -21,7 +21,7 @@
     <![endif]-->
   </head>
   
-  <body onload="showList('左揽雀尾','all')">
+  <body onload="onloadShowList()">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -106,6 +106,18 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{{ site.baseurl }}/js/ie10-viewport-bug-workaround.js"></script>
     <!-- showList -->
+    <script type="text/javascript">
+      function onloadShowList() {
+        var regCat = new RegExp("(^|&)Cat=([^&]*)(&|$)");
+        var parCat = window.location.search.substr(1).match(regCat);
+        var regTag = new RegExp("(^|&)Tag=([^&]*)(&|$)");
+        var parTag = window.location.search.substr(1).match(regTag);
+        if ((parCat != null)&&(parTag != null)) {
+          showList(decodeURI(parCat[2]),decodeURI(parTag[2]));
+        } else {
+          showList('all','all');
+        }
+      }</script>
     <script type="text/javascript">
       function showList(filterCat,filterTag) {
         if (filterCat == "all") {
