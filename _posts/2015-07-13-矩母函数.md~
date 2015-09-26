@@ -26,7 +26,7 @@ $$\begin{aligned}
 
 矩母函数的 $n$ 次导数 $M^{(n)}(t)=E(X^n e^{tX})$，故 $M^{(n)}(0)=E(X^n)$
 
-$X_1$、$X_2$独立，则有 $M_{X_1+X_2}(t)=E(e^{t(X_1+X_2)})=E(e^{tX_1})E(e^{tX_2})=M_{X_1}(t)M_{X_2}(t)$
+$X_1$、$X_2$独立，则有 $M_ {X_1+X_2}(t)=E(e^{t(X_1+X_2)})=E(e^{tX_1})E(e^{tX_2})=M_ {X_1}(t)M_ {X_2}(t)$
 
 # 常见分布的矩母函数
 
@@ -48,6 +48,6 @@ $X_1$、$X_2$独立，则有 $M_{X_1+X_2}(t)=E(e^{t(X_1+X_2)})=E(e^{tX_1})E(e^{t
 
 $X_1,\cdots,X_n$ 的联合矩母函数 $M(t_1,\cdots,t_n)=E(e^{t_1X_1+\cdots+t_nX_n})$
 
-则 $X_i$ 的矩母函数 $M_{X_i}(t)=E(e^{t X_i})=M(0,\cdots,0,t,0,\cdots,0)$
+则 $X_i$ 的矩母函数 $M_ {X_i}(t)=E(e^{t X_i})=M(0,\cdots,0,t,0,\cdots,0)$
 
 $X_1,\cdots,X_n$ 互相独立的充要条件是 $M(t_1,\cdots,t_n)=M_ {X_1}(t_1)\cdots M_ {X_n}(t_n)$

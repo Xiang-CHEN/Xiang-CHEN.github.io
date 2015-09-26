@@ -1,35 +1,60 @@
 ---
 layout: post
 title: 矩阵
-date: 2015-06-19
+date: 2015-07-18
 categories: 右旋粒子
 tag: 线代矩阵
 ---
 
 映射的矩阵表示
 
-
+$(\sigma(\epsilon_1),\sigma(\epsilon_2),\cdots,\sigma(\epsilon_n))=(e_1,e_2,\cdots,e_m)\left[
+\begin{array}{c c c}
+a_{11} & \cdots & a_{1n}\\\\
+\vdots & & \vdots\\\\
+a_{m1} & \cdots & a_{mn}
+\end{array}
+\right]$
+则 $Y=AX$
 
 矩阵对应的线性映射的秩=矩阵的行秩=矩阵的列秩
 
 # 逆矩阵
+
 可逆矩阵可表示为初等矩阵的乘积
-若$$AB=E$$，则必有$BA=E$
+
+若 $AB=E$，则必有 $BA=E$
 
 广义逆矩阵：
+
 - $AXA=A$
 - $XAX=X$
 - $AX=(AX)^H$
 - $XA=(XA)^H$
 
-矩阵相抵
+相抵
 相似
 相合
 
 LU分解
+
+$n$ 阶矩阵各阶左上角子块矩阵可逆，则存在主对角元全为 1 的下三角阵 $L$ 和上三角阵 $U$ 使 $A=LU$。
+
 QR分解
 Cholesky分解
 Schur补
+
+$A=\left[
+\begin{array}{cc}
+B & 0\\\\
+C & D
+\end{array}
+\right]$ $B$、$D$ 分别为 $k$ 阶、$m$ 阶矩阵。则 $A$ 可逆等价于 $B$、$D$ 都可逆，且 $A^{-1}=\left[
+\begin{array}{cc}
+B^{-1} & 0\\\\
+-D^{-1}CB^{-1} & D^{-1}
+\end{array}
+\right]$
 
 - $tr(AB)=tr(BA)$
 - 与任意$n$阶矩阵可交换的矩阵一定是$n$阶数量矩阵

@@ -135,8 +135,8 @@
     }); </script>
     <!-- jumptoList -->
     <script type="text/javascript">
-      function jumptoList() {
-        window.location.href="/index.html?Cat="+encodeURI({{category | first}})+"&Tag="+encodeURI({{tag | first}})
+      function jumptoList(filterCat,filterTag) {
+        window.location.href="/index.html?Cat="+encodeURI(filterCat)+"&Tag="+encodeURI(filterTag)
       }</script>
     <!-- Mathjax -->
     <script type="text/x-mathjax-config">

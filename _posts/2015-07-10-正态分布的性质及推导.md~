@@ -37,17 +37,17 @@ X_1 \\\\ X_2
 \mu_1 \\\\ \mu_2
 \end{array}\right),
 \left(\begin{array}{c c}
-\Sigma_{11} & 0\\\\
-0 & \Sigma_{22}
+\Sigma_ {11} & 0\\\\
+0 & \Sigma_ {22}
 \end{array}\right)
-\right)$，则 $X_i\sim N(\mu_i,\Sigma_{ii})$，且 $X_1$、$X_2$ 独立。
+\right)$，则 $X_i\sim N(\mu_i,\Sigma_ {ii})$，且 $X_1$、$X_2$ 独立。
 
 > 证明：
 > $$\begin{aligned}
 &f_ {X_1,X_2}(x_1,x_2)\\
-=&\frac{1}{\sqrt{(2\pi)^{n_1+n_2}\det\Sigma_{11}\det\Sigma_{22}}}e^{-\frac{1}{2}\left[(x_1-\mu_1)^T\Sigma_{11}^{-1}(x_1-\mu_1)+(x_2-\mu_2)^T\Sigma_{22}^{-1}(x_2-\mu_2)\right]}\\
-=&\frac{1}{\sqrt{(2\pi)^{n_1}\det\Sigma_{11}}}e^{-\frac{1}{2}(x_1-\mu_1)^T\Sigma_{11}^{-1}(x_1-\mu_1)}
-\frac{1}{\sqrt{(2\pi)^{n_2}\det\Sigma_{22}}}e^{-\frac{1}{2}(x_2-\mu_2)^T\Sigma_{22}^{-1}(x_2-\mu_2)}
+=&\frac{1}{\sqrt{(2\pi)^{n_1+n_2}\det\Sigma_ {11}\det\Sigma_ {22}}}e^{-\frac{1}{2}\left[(x_1-\mu_1)^T\Sigma_ {11}^{-1}(x_1-\mu_1)+(x_2-\mu_2)^T\Sigma_ {22}^{-1}(x_2-\mu_2)\right]}\\
+=&\frac{1}{\sqrt{(2\pi)^{n_1}\det\Sigma_ {11}}}e^{-\frac{1}{2}(x_1-\mu_1)^T\Sigma_ {11}^{-1}(x_1-\mu_1)}
+\frac{1}{\sqrt{(2\pi)^{n_2}\det\Sigma_ {22}}}e^{-\frac{1}{2}(x_2-\mu_2)^T\Sigma_ {22}^{-1}(x_2-\mu_2)}
 \end{aligned}$$
 > 结论可见。
 
@@ -59,10 +59,10 @@ X_1 \\\\ X_2
 \mu_1 \\\\ \mu_2
 \end{array}\right),
 \left(\begin{array}{c c}
-\Sigma_{11} & \Sigma_{12} \\\\
-\Sigma_{21} & \Sigma_{22}
+\Sigma_ {11} & \Sigma_ {12} \\\\
+\Sigma_ {21} & \Sigma_ {22}
 \end{array}\right)
-\right)$，则 $X_i\sim N(\mu_i,\Sigma_{ii})$，且 $X_1$、$X_2$ 独立等价于 $\Sigma_{12}=\Sigma_{21}=0$。
+\right)$，则 $X_i\sim N(\mu_i,\Sigma_ {ii})$，且 $X_1$、$X_2$ 独立等价于 $\Sigma_ {12}=\Sigma_ {21}=0$。
 
 > 证明：
 > 取 $A=\left(\begin{array}{c c}I_1 & 0 \\\\ -\Sigma_ {21}\Sigma_ {11}^{-1} & I_2\end{array}\right)$，则 $AX=
