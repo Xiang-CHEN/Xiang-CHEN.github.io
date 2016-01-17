@@ -10,7 +10,6 @@ tag: 前端
 
 作为 Hello World，本页面用于测试。测试代码基于 [Markdown Here](http://markdown-here.com/) 提供的测试内容修改。
 
-
 ```javascript
 function syntaxHighlighting() {
   var n = 33;
