@@ -12,7 +12,7 @@ tag: 算法
 
 KMP算法：$O(m+n)$
 
-C 版本：
+C　版本：
 
 ``` c
 void Next(char *P){
